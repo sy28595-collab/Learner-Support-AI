@@ -1,0 +1,467 @@
+[
+  {
+    "thread_id": "THREAD_001",
+    "learner_id": "LEARNER_001",
+    "created_at": "2026-11-15",
+    "messages": [
+      {"sender": "learner", "message": "Hello, I purchased the Complete Python Programming course on November 10, but I am unable to access the recorded video lectures."},
+      {"sender": "agent", "message": "Hello! Thank you for contacting support. Are you able to log in to your learning account successfully?"},
+      {"sender": "learner", "message": "Yes, I can log in. I can see the course dashboard, but when I click on any video, the player keeps loading."},
+      {"sender": "agent", "message": "Please clear your browser cache and cookies, then try opening the course again."},
+      {"sender": "learner", "message": "I cleared the cache and also tried another browser. The same problem is happening."},
+      {"sender": "agent", "message": "Could you please tell us which browser and device you are using?"},
+      {"sender": "learner", "message": "I am using Chrome on my Windows laptop. Other websites and videos are working normally."},
+      {"sender": "agent", "message": "Thank you. I have forwarded your issue to our technical team for investigation."},
+      {"sender": "learner", "message": "Please resolve this quickly because my Python exam is next week. When will I be able to access the videos?"}
+    ],
+    "expected_summary": {
+      "issue": "Recorded videos in the Complete Python Programming course are not loading.",
+      "steps_tried": ["Cleared browser cache and cookies", "Tried another browser"],
+      "current_status": "Unresolved; escalated to technical team.",
+      "unresolved_questions": ["When will video access be restored?"],
+      "next_action": "Technical team should investigate the video playback issue and provide an update."
+    }
+  },
+  {
+    "thread_id": "THREAD_002",
+    "learner_id": "LEARNER_002",
+    "created_at": "2026-11-14",
+    "messages": [
+      {"sender": "learner", "message": "I enrolled in the Data Science with Python course on November 5. Initially everything was working fine, but since yesterday three modules are showing as locked."},
+      {"sender": "agent", "message": "Could you share the names of the modules that are locked?"},
+      {"sender": "learner", "message": "Pandas Advanced, Data Visualization and Introduction to Machine Learning. I have already completed all previous modules."},
+      {"sender": "agent", "message": "Please check whether all previous lessons are marked as completed in your dashboard."},
+      {"sender": "learner", "message": "Yes, all previous lessons show 100% completion. I also logged out and logged in again."},
+      {"sender": "agent", "message": "Did you receive any notification regarding a course update or payment?"},
+      {"sender": "learner", "message": "No notification. My payment was successful when I purchased the course. I have the payment receipt."},
+      {"sender": "agent", "message": "Please share the course enrollment ID and payment reference through the approved support channel so we can verify the account."},
+      {"sender": "learner", "message": "My enrollment ID is ENR-002. I need these modules because my assessment is scheduled for November 22."},
+      {"sender": "agent", "message": "We have forwarded the access issue to the course administration team."}
+    ],
+    "expected_summary": {
+      "issue": "Three Data Science course modules are locked despite completion of previous modules.",
+      "steps_tried": ["Verified previous module completion", "Logged out and logged in again"],
+      "current_status": "Unresolved; forwarded to course administration team.",
+      "unresolved_questions": ["Why are the three modules locked?", "When will access be restored?"],
+      "next_action": "Verify enrollment and payment records and investigate module access."
+    }
+  },
+  {
+    "thread_id": "THREAD_003",
+    "learner_id": "LEARNER_003",
+    "created_at": "2026-11-13",
+    "messages": [
+      {"sender": "learner", "message": "I purchased the Advanced Excel course last month. The course dashboard shows that I have access, but the downloadable practice files are missing."},
+      {"sender": "agent", "message": "Are you facing this issue with every module or only specific lessons?"},
+      {"sender": "learner", "message": "I checked five modules. None of them has a working download button."},
+      {"sender": "agent", "message": "Please try accessing the course from a desktop browser instead of the mobile application."},
+      {"sender": "learner", "message": "I tried Chrome on my laptop. The download buttons are visible, but clicking them does nothing."},
+      {"sender": "agent", "message": "Do you see any error message?"},
+      {"sender": "learner", "message": "No error message appears. The page simply stays the same."},
+      {"sender": "agent", "message": "We have reported this issue to the content management team."},
+      {"sender": "learner", "message": "I need the practice files before my assessment on November 25. Please tell me if they can be shared another way."}
+    ],
+    "expected_summary": {
+      "issue": "Downloadable practice files are unavailable in the Advanced Excel course.",
+      "steps_tried": ["Checked five modules", "Tried accessing through Chrome on a laptop"],
+      "current_status": "Unresolved; reported to content management team.",
+      "unresolved_questions": ["Can the practice files be shared through an alternative method?"],
+      "next_action": "Investigate broken download buttons and provide access to the practice files."
+    }
+  },
+  {
+    "thread_id": "THREAD_004",
+    "learner_id": "LEARNER_004",
+    "created_at": "2026-11-12",
+    "messages": [
+      {"sender": "learner", "message": "I paid Rs. 4,999 for the Machine Learning course, but my account still shows the payment as pending."},
+      {"sender": "agent", "message": "Please tell us when you completed the payment and which payment method you used."},
+      {"sender": "learner", "message": "I paid on November 11 using UPI. The amount was deducted from my bank account immediately."},
+      {"sender": "agent", "message": "Sometimes payment confirmation takes some time. Please wait for a few hours."},
+      {"sender": "learner", "message": "It has already been more than 24 hours. I also received a successful payment notification from my bank."},
+      {"sender": "agent", "message": "Did you receive an order confirmation email from our platform?"},
+      {"sender": "learner", "message": "No, I did not receive any confirmation email. My bank transaction was successful."},
+      {"sender": "agent", "message": "Please provide the transaction reference through our approved support channel. We will ask the payment team to verify it."},
+      {"sender": "learner", "message": "I need course access urgently. Should I make another payment or wait for the existing payment to be confirmed?"}
+    ],
+    "expected_summary": {
+      "issue": "Rs. 4,999 UPI payment was deducted, but the Machine Learning course enrollment remains pending.",
+      "steps_tried": ["Waited more than 24 hours", "Checked bank payment confirmation"],
+      "current_status": "Unresolved; payment verification required.",
+      "unresolved_questions": ["Should the learner make another payment or wait?"],
+      "next_action": "Verify the UPI transaction with the payment team and update the enrollment status. Do not request another payment before verification."
+    }
+  },
+  {
+    "thread_id": "THREAD_005",
+    "learner_id": "LEARNER_005",
+    "created_at": "2026-11-11",
+    "messages": [
+      {"sender": "learner", "message": "I accidentally purchased the wrong course. I wanted Python for Data Science, but I purchased Java Programming."},
+      {"sender": "agent", "message": "When did you purchase the course?"},
+      {"sender": "learner", "message": "I purchased it yesterday, November 10. I have not started any lessons."},
+      {"sender": "agent", "message": "Would you prefer a course exchange or a refund?"},
+      {"sender": "learner", "message": "I would prefer an exchange to Python for Data Science. I do not want to lose the amount I paid."},
+      {"sender": "agent", "message": "We need to check whether your purchase is eligible for a course exchange."},
+      {"sender": "learner", "message": "Please confirm if the exchange is possible and whether I need to pay any additional amount."},
+      {"sender": "agent", "message": "Your request has been forwarded to the course administration team for review."},
+      {"sender": "learner", "message": "I have not accessed the Java course at all. Please update me as soon as possible."}
+    ],
+    "expected_summary": {
+      "issue": "Learner purchased Java Programming instead of Python for Data Science and requested a course exchange.",
+      "steps_tried": ["Confirmed purchase date", "Confirmed that no lessons have been accessed"],
+      "current_status": "Exchange request forwarded for review; eligibility not confirmed.",
+      "unresolved_questions": ["Is the exchange possible?", "Will an additional payment be required?"],
+      "next_action": "Review the exchange request and confirm eligibility and any price difference."
+    }
+  },
+  {
+    "thread_id": "THREAD_006",
+    "learner_id": "LEARNER_006",
+    "created_at": "2026-11-10",
+    "messages": [
+      {"sender": "learner", "message": "I requested a refund for my Web Development course on November 3, but I have not received the amount yet."},
+      {"sender": "agent", "message": "Could you confirm whether you received a refund request confirmation?"},
+      {"sender": "learner", "message": "Yes, I received an email saying my refund request was submitted successfully."},
+      {"sender": "agent", "message": "Was the refund request approved or is it still under review?"},
+      {"sender": "learner", "message": "The email says it is under review. I have not received any further communication."},
+      {"sender": "agent", "message": "Please check whether your original payment method is still active."},
+      {"sender": "learner", "message": "Yes, the original bank account is active. I paid using a debit card."},
+      {"sender": "agent", "message": "We have asked the finance team to check the refund status."},
+      {"sender": "learner", "message": "Can you confirm the expected refund date? I need to plan my expenses."}
+    ],
+    "expected_summary": {
+      "issue": "Refund for the Web Development course has not been received.",
+      "steps_tried": ["Submitted refund request on November 3", "Confirmed original debit card account is active"],
+      "current_status": "Refund request is under review; finance team contacted.",
+      "unresolved_questions": ["What is the expected refund date?"],
+      "next_action": "Finance team should verify refund status and communicate the expected timeline."
+    }
+  },
+  {
+    "thread_id": "THREAD_007",
+    "learner_id": "LEARNER_007",
+    "created_at": "2026-11-09",
+    "messages": [
+      {"sender": "learner", "message": "I am unable to log in to my account. It says that my email or password is incorrect."},
+      {"sender": "agent", "message": "Please check whether you are using the same email address that you used during registration."},
+      {"sender": "learner", "message": "Yes, I am using my registered email address. I am sure the password is correct."},
+      {"sender": "agent", "message": "Please use the Forgot Password option to reset your password."},
+      {"sender": "learner", "message": "I requested a password reset, but I have not received the reset email."},
+      {"sender": "agent", "message": "Please check your spam and junk folders."},
+      {"sender": "learner", "message": "I checked both folders. There is no reset email. I also tried requesting it three times."},
+      {"sender": "agent", "message": "We will check whether there is an issue with your registered account."},
+      {"sender": "learner", "message": "I have an assignment deadline tomorrow. Please help me restore account access."}
+    ],
+    "expected_summary": {
+      "issue": "Learner cannot log in and is not receiving password reset emails.",
+      "steps_tried": ["Verified registered email address", "Requested password reset three times", "Checked spam and junk folders"],
+      "current_status": "Unresolved; account issue needs investigation.",
+      "unresolved_questions": ["Why are password reset emails not being delivered?"],
+      "next_action": "Verify the learner account and investigate password reset email delivery."
+    }
+  },
+  {
+    "thread_id": "THREAD_008",
+    "learner_id": "LEARNER_008",
+    "created_at": "2026-11-08",
+    "messages": [
+      {"sender": "learner", "message": "I changed my registered email address last week. Since then, I am not receiving course notifications or assignment reminders."},
+      {"sender": "agent", "message": "Did you receive a confirmation message after changing your email address?"},
+      {"sender": "learner", "message": "Yes, I clicked the verification link and received a message saying my email was updated."},
+      {"sender": "agent", "message": "Please check your notification preferences in account settings."},
+      {"sender": "learner", "message": "All notification preferences are enabled. I also checked my spam folder."},
+      {"sender": "agent", "message": "Are you able to receive other emails from our support team?"},
+      {"sender": "learner", "message": "Yes, I received your previous support email, but I am not receiving automated course notifications."},
+      {"sender": "agent", "message": "We will ask our technical team to check the notification service."},
+      {"sender": "learner", "message": "My assignment reminder is important. Can you confirm whether my notifications are working now?"}
+    ],
+    "expected_summary": {
+      "issue": "Automated course notifications and assignment reminders are not reaching the learner after an email address change.",
+      "steps_tried": ["Verified the new email address", "Checked notification preferences", "Checked spam folder"],
+      "current_status": "Unresolved; technical investigation requested.",
+      "unresolved_questions": ["Are automated notifications working now?"],
+      "next_action": "Investigate automated email delivery to the updated learner email address."
+    }
+  },
+  {
+    "thread_id": "THREAD_009",
+    "learner_id": "LEARNER_009",
+    "created_at": "2026-11-07",
+    "messages": [
+      {"sender": "learner", "message": "My account gets logged out automatically every few minutes while I am watching recorded lectures."},
+      {"sender": "agent", "message": "Does this happen on a particular browser or across different browsers?"},
+      {"sender": "learner", "message": "It happens on Chrome and Edge. I am using a Windows 11 laptop."},
+      {"sender": "agent", "message": "Please check whether multiple devices are logged into your account."},
+      {"sender": "learner", "message": "I checked. My account is only logged in on this laptop."},
+      {"sender": "agent", "message": "Please update your browser and try again."},
+      {"sender": "learner", "message": "Both browsers are updated. I also restarted my laptop, but the problem continues."},
+      {"sender": "agent", "message": "We have forwarded this session issue to our technical team."},
+      {"sender": "learner", "message": "I have to watch long lectures. Please check whether there is a session timeout problem."}
+    ],
+    "expected_summary": {
+      "issue": "Learner is automatically logged out while watching recorded lectures.",
+      "steps_tried": ["Tested Chrome and Edge", "Checked active devices", "Updated browsers", "Restarted laptop"],
+      "current_status": "Unresolved; forwarded to technical team.",
+      "unresolved_questions": ["Is the automatic logout caused by a session timeout issue?"],
+      "next_action": "Investigate session management and authentication timeout behavior."
+    }
+  },
+  {
+    "thread_id": "THREAD_010",
+    "learner_id": "LEARNER_010",
+    "created_at": "2026-11-06",
+    "messages": [
+      {"sender": "learner", "message": "I submitted my Python assignment on November 4, but the dashboard still shows it as not submitted."},
+      {"sender": "agent", "message": "Did you receive a submission confirmation after uploading the assignment?"},
+      {"sender": "learner", "message": "Yes, the upload reached 100%, and I saw a submission successful message."},
+      {"sender": "agent", "message": "Please refresh your dashboard and check the assignment section again."},
+      {"sender": "learner", "message": "I refreshed the page and logged in again. It still shows the assignment as pending."},
+      {"sender": "agent", "message": "Could you confirm the assignment name?"},
+      {"sender": "learner", "message": "It is Python Data Analysis Assignment 3. The deadline is November 8."},
+      {"sender": "agent", "message": "We have forwarded your submission status issue to the academic support team."},
+      {"sender": "learner", "message": "I do not want to lose marks because of this technical problem. Can you confirm whether my submission was received?"}
+    ],
+    "expected_summary": {
+      "issue": "Python Data Analysis Assignment 3 shows as pending despite a successful upload message.",
+      "steps_tried": ["Verified successful upload message", "Refreshed dashboard", "Logged in again"],
+      "current_status": "Unresolved; forwarded to academic support.",
+      "unresolved_questions": ["Was the assignment successfully stored?", "Will the submission be considered before the November 8 deadline?"],
+      "next_action": "Verify the assignment submission record and confirm its timestamp with academic support."
+    }
+  },
+  {
+    "thread_id": "THREAD_011",
+    "learner_id": "LEARNER_011",
+    "created_at": "2026-11-05",
+    "messages": [
+      {"sender": "learner", "message": "I completed all the lessons in my Digital Marketing course, but I cannot download my certificate."},
+      {"sender": "agent", "message": "Have you completed the final assessment as well?"},
+      {"sender": "learner", "message": "Yes, I scored 85% in the final assessment and passed it."},
+      {"sender": "agent", "message": "Please check whether all course modules show completed status."},
+      {"sender": "learner", "message": "All modules show 100% completion. The certificate section says certificate generation is pending."},
+      {"sender": "agent", "message": "Please wait for some time because certificate generation may take a while."},
+      {"sender": "learner", "message": "It has been three days. I need the certificate for a job application."},
+      {"sender": "agent", "message": "We have forwarded your certificate generation issue to the certification team."},
+      {"sender": "learner", "message": "Please tell me when I can download it."}
+    ],
+    "expected_summary": {
+      "issue": "Digital Marketing certificate is not available despite course completion and passing the final assessment with 85%.",
+      "steps_tried": ["Verified all modules are 100% complete", "Confirmed final assessment passed"],
+      "current_status": "Certificate generation pending for three days; forwarded to certification team.",
+      "unresolved_questions": ["When will the certificate be available?"],
+      "next_action": "Verify completion eligibility and investigate certificate generation."
+    }
+  },
+  {
+    "thread_id": "THREAD_012",
+    "learner_id": "LEARNER_012",
+    "created_at": "2026-11-04",
+    "messages": [
+      {"sender": "learner", "message": "I submitted my assignment two weeks ago, but it has not been evaluated yet."},
+      {"sender": "agent", "message": "Could you share the assignment name and submission date?"},
+      {"sender": "learner", "message": "It is the Machine Learning Model Evaluation assignment. I submitted it on October 21."},
+      {"sender": "agent", "message": "The usual evaluation process can take some time. Please check again later."},
+      {"sender": "learner", "message": "I understand, but my classmates who submitted on the same day have already received their grades."},
+      {"sender": "agent", "message": "Have you received any feedback or evaluation notification?"},
+      {"sender": "learner", "message": "No. The assignment status still says pending evaluation."},
+      {"sender": "agent", "message": "We will contact the academic team to check your submission."},
+      {"sender": "learner", "message": "I have another course assessment next week. Please let me know when my grade will be available."}
+    ],
+    "expected_summary": {
+      "issue": "Machine Learning Model Evaluation assignment has remained pending since October 21.",
+      "steps_tried": ["Checked assignment status", "Compared status with classmates who submitted on the same date"],
+      "current_status": "Pending evaluation; academic team contacted.",
+      "unresolved_questions": ["When will the assignment be evaluated and graded?"],
+      "next_action": "Academic team should verify the submission and provide an evaluation timeline."
+    }
+  },
+  {
+    "thread_id": "THREAD_013",
+    "learner_id": "LEARNER_013",
+    "created_at": "2026-11-03",
+    "messages": [
+      {"sender": "learner", "message": "The Python coding environment is not executing my code. Whenever I click Run, it keeps showing the loading indicator."},
+      {"sender": "agent", "message": "Are you receiving any error message?"},
+      {"sender": "learner", "message": "Sometimes it says Kernel disconnected. Other times it keeps loading without showing any result."},
+      {"sender": "agent", "message": "Please restart the coding environment and try running a simple print statement."},
+      {"sender": "learner", "message": "I restarted it and tried print('Hello World'). The kernel disconnected again."},
+      {"sender": "agent", "message": "Please try accessing the coding environment from another browser."},
+      {"sender": "learner", "message": "I tried Edge and Chrome. The issue is the same. My internet connection is stable."},
+      {"sender": "agent", "message": "We have escalated this issue to the engineering team."},
+      {"sender": "learner", "message": "I have a practical exam on November 10. Can you provide an alternative coding environment until this is fixed?"}
+    ],
+    "expected_summary": {
+      "issue": "Online Python coding environment repeatedly disconnects its kernel and fails to execute code.",
+      "steps_tried": ["Restarted coding environment", "Tested a simple print statement", "Tried Chrome and Edge", "Checked internet connection"],
+      "current_status": "Unresolved; escalated to engineering team.",
+      "unresolved_questions": ["Can an alternative coding environment be provided until the issue is fixed?"],
+      "next_action": "Investigate kernel disconnections and provide a temporary alternative for practical exam preparation."
+    }
+  },
+  {
+    "thread_id": "THREAD_014",
+    "learner_id": "LEARNER_014",
+    "created_at": "2026-11-02",
+    "messages": [
+      {"sender": "learner", "message": "I am unable to upload my project report. The file size is 8 MB, and the portal shows an upload failed error."},
+      {"sender": "agent", "message": "What file format are you trying to upload?"},
+      {"sender": "learner", "message": "It is a PDF file. The assignment portal accepts PDF according to the instructions."},
+      {"sender": "agent", "message": "Please try compressing the PDF and uploading it again."},
+      {"sender": "learner", "message": "I compressed it to 3 MB, but the upload still fails."},
+      {"sender": "agent", "message": "Could you try using a different browser?"},
+      {"sender": "learner", "message": "I tried Firefox as well. I get the same upload failed error."},
+      {"sender": "agent", "message": "We have reported this issue to the technical team."},
+      {"sender": "learner", "message": "The deadline is November 5. Can I submit the report through another approved method if the portal remains unavailable?"}
+    ],
+    "expected_summary": {
+      "issue": "PDF project report upload fails in the assignment portal.",
+      "steps_tried": ["Compressed PDF from 8 MB to 3 MB", "Tried Firefox"],
+      "current_status": "Unresolved; reported to technical team.",
+      "unresolved_questions": ["Can the report be submitted through an alternative approved method?"],
+      "next_action": "Investigate upload failure and confirm an approved alternative submission method before the November 5 deadline."
+    }
+  },
+  {
+    "thread_id": "THREAD_015",
+    "learner_id": "LEARNER_015",
+    "created_at": "2026-11-01",
+    "messages": [
+      {"sender": "learner", "message": "The course videos are playing without sound. I can see the video, but there is no audio."},
+      {"sender": "agent", "message": "Please check your device volume and browser sound settings."},
+      {"sender": "learner", "message": "My volume is working. I tested YouTube and other video websites, and they have sound."},
+      {"sender": "agent", "message": "Please try another lesson in the same course."},
+      {"sender": "learner", "message": "I tried four lessons. None of them has audio."},
+      {"sender": "agent", "message": "Please clear your browser cache and restart the browser."},
+      {"sender": "learner", "message": "I did that, but there is still no audio. I also tried the mobile application."},
+      {"sender": "agent", "message": "We have escalated the media playback issue to the technical team."},
+      {"sender": "learner", "message": "I cannot understand the lessons without audio. Please provide an update."}
+    ],
+    "expected_summary": {
+      "issue": "Course videos play without audio across multiple lessons.",
+      "steps_tried": ["Checked device volume and browser sound settings", "Tested other video websites", "Tried four course lessons", "Cleared browser cache", "Tested mobile application"],
+      "current_status": "Unresolved; escalated to technical team.",
+      "unresolved_questions": ["When will course audio be restored?"],
+      "next_action": "Investigate course media audio delivery and provide a status update."
+    }
+  },
+  {
+    "thread_id": "THREAD_016",
+    "learner_id": "LEARNER_016",
+    "created_at": "2026-10-31",
+    "messages": [
+      {"sender": "learner", "message": "I am facing two problems with my Full Stack Development course. First, some React lessons are locked. Second, I cannot download the project resources."},
+      {"sender": "agent", "message": "Could you tell us which React lessons are locked?"},
+      {"sender": "learner", "message": "React Hooks and State Management are locked even though I completed the previous module."},
+      {"sender": "agent", "message": "Please check whether your course progress shows the previous module as completed."},
+      {"sender": "learner", "message": "It shows 100% completion. I logged out and logged in again, but the lessons remain locked."},
+      {"sender": "agent", "message": "Regarding project resources, are you able to see the download buttons?"},
+      {"sender": "learner", "message": "Yes, the buttons are visible, but clicking them does not download anything."},
+      {"sender": "agent", "message": "Please try a desktop browser and check both issues again."},
+      {"sender": "learner", "message": "I am already using Chrome on my laptop. Both problems continue."},
+      {"sender": "agent", "message": "We have created a technical support request for both problems."},
+      {"sender": "learner", "message": "My project submission is due on November 7. I need the locked lessons and resource files before then."}
+    ],
+    "expected_summary": {
+      "issue": "Two Full Stack Development course issues: React lessons remain locked and project resources cannot be downloaded.",
+      "steps_tried": ["Verified previous module completion", "Logged out and logged in again", "Tested downloads in Chrome on a laptop"],
+      "current_status": "Both issues unresolved; technical support request created.",
+      "unresolved_questions": ["When will the React lessons be unlocked?", "How can project resources be downloaded?"],
+      "next_action": "Investigate lesson access and resource download failures separately, prioritizing the November 7 deadline."
+    }
+  },
+  {
+    "thread_id": "THREAD_017",
+    "learner_id": "LEARNER_017",
+    "created_at": "2026-10-30",
+    "messages": [
+      {"sender": "learner", "message": "I enrolled in the Data Analytics course, but my profile shows the wrong course name and my payment status is still pending."},
+      {"sender": "agent", "message": "Could you explain what course name appears in your profile?"},
+      {"sender": "learner", "message": "I purchased Data Analytics with Python, but the dashboard shows Introduction to Excel."},
+      {"sender": "agent", "message": "Did you receive a purchase confirmation email?"},
+      {"sender": "learner", "message": "No confirmation email, but my payment was deducted successfully."},
+      {"sender": "agent", "message": "Please verify your transaction details through the approved support channel."},
+      {"sender": "learner", "message": "I checked my bank statement. The amount was deducted on October 29."},
+      {"sender": "agent", "message": "We will ask the payment and course administration teams to review your account."},
+      {"sender": "learner", "message": "I do not want to lose access to the course I purchased. Please confirm whether my payment and enrollment are correctly linked."},
+      {"sender": "agent", "message": "Your request has been forwarded for verification. We do not have a confirmed resolution yet."}
+    ],
+    "expected_summary": {
+      "issue": "Learner purchased Data Analytics with Python but sees Introduction to Excel, while payment status remains pending.",
+      "steps_tried": ["Checked purchase confirmation email", "Verified bank statement and payment deduction date"],
+      "current_status": "Unresolved; payment and course administration teams asked to investigate.",
+      "unresolved_questions": ["Is the payment correctly linked to the intended course enrollment?"],
+      "next_action": "Verify payment transaction and correct course mapping before changing enrollment records."
+    }
+  },
+  {
+    "thread_id": "THREAD_018",
+    "learner_id": "LEARNER_018",
+    "created_at": "2026-10-29",
+    "messages": [
+      {"sender": "learner", "message": "Hello, I am facing a problem with my course."},
+      {"sender": "agent", "message": "Hello! We are happy to help. Could you please explain the issue in detail?"},
+      {"sender": "learner", "message": "The course is not working properly."},
+      {"sender": "agent", "message": "Are you unable to log in, access videos, submit assignments, or use another feature?"},
+      {"sender": "learner", "message": "I am not sure. Something is wrong when I open it."}
+    ],
+    "expected_summary": {
+      "issue": "Learner reports a general course problem, but the specific issue is unclear.",
+      "steps_tried": [],
+      "current_status": "Unresolved; insufficient information available.",
+      "unresolved_questions": ["Which course is affected?", "What exactly happens when the learner opens the course?", "Is an error message displayed?"],
+      "next_action": "Ask the learner for the course name, affected feature, device/browser and exact error details."
+    }
+  },
+  {
+    "thread_id": "THREAD_019",
+    "learner_id": "LEARNER_019",
+    "created_at": "2026-10-28",
+    "messages": [
+      {"sender": "learner", "message": "I was unable to download my course completion certificate yesterday."},
+      {"sender": "agent", "message": "Please try logging out and logging in again. Also check whether your course is marked as completed."},
+      {"sender": "learner", "message": "I logged in again and checked my course progress. It shows 100% completion."},
+      {"sender": "agent", "message": "Please open the certificate section and try downloading it once more."},
+      {"sender": "learner", "message": "It is working now. I successfully downloaded the certificate."},
+      {"sender": "agent", "message": "Thank you for confirming. Is there anything else we can help you with?"},
+      {"sender": "learner", "message": "No, everything is fine now. Thank you for your help."}
+    ],
+    "expected_summary": {
+      "issue": "Learner initially could not download the course completion certificate.",
+      "steps_tried": ["Logged out and logged in again", "Verified course completion status", "Retried certificate download"],
+      "current_status": "Resolved; learner successfully downloaded the certificate.",
+      "unresolved_questions": [],
+      "next_action": "No further action required unless the issue reappears."
+    }
+  },
+  {
+    "thread_id": "THREAD_020",
+    "learner_id": "LEARNER_020",
+    "created_at": "2026-10-27",
+    "messages": [
+      {"sender": "learner", "message": "I purchased the Artificial Intelligence Engineering program on October 10. Since enrollment, I have experienced several problems. Initially, I could not access the Python fundamentals module."},
+      {"sender": "agent", "message": "We apologize for the inconvenience. Could you confirm whether you can access the course dashboard?"},
+      {"sender": "learner", "message": "Yes, the dashboard works. The Python module was locked even though my payment was successful. After two days, access was restored."},
+      {"sender": "agent", "message": "Thank you for confirming. Are you facing any other issues now?"},
+      {"sender": "learner", "message": "Yes. My NLP assignment submission is showing pending even though I uploaded the file on October 20. I also received an upload confirmation message."},
+      {"sender": "agent", "message": "Please refresh the assignment page and check whether the submission status changes."},
+      {"sender": "learner", "message": "I refreshed it several times and also logged in from another browser. The status remains pending."},
+      {"sender": "agent", "message": "We have forwarded the assignment status issue to academic support."},
+      {"sender": "learner", "message": "There is another problem. My course progress shows 72%, but I have completed almost all the lessons. Only two optional videos are remaining."},
+      {"sender": "agent", "message": "Please check whether the remaining mandatory lessons and quizzes show completed status."},
+      {"sender": "learner", "message": "All mandatory lessons and quizzes show completed. Only two optional videos are left."},
+      {"sender": "agent", "message": "We will ask the course administration team to verify your progress calculation."},
+      {"sender": "learner", "message": "My final project evaluation is scheduled for November 5. I am worried that the pending assignment and incorrect progress percentage may affect my eligibility."},
+      {"sender": "agent", "message": "We have created separate requests for the assignment status and course progress issues. Both are awaiting investigation."},
+      {"sender": "learner", "message": "Please confirm whether my assignment submission from October 20 is available in your system and whether my 72% progress will affect the final project evaluation."},
+      {"sender": "agent", "message": "We cannot confirm these details until the academic and course administration teams complete their verification."}
+    ],
+    "expected_summary": {
+      "issue": "Artificial Intelligence Engineering learner has two current issues: NLP assignment shows pending despite successful upload, and course progress displays 72% despite completion of mandatory lessons and quizzes. Earlier Python module access issue was resolved.",
+      "steps_tried": ["Confirmed Python module access was restored", "Refreshed assignment page", "Tried another browser", "Verified mandatory lessons and quizzes are completed"],
+      "current_status": "Two issues unresolved. Assignment issue forwarded to academic support; progress issue forwarded to course administration. Earlier module access issue resolved.",
+      "unresolved_questions": ["Is the October 20 NLP assignment stored successfully?", "Will the displayed 72% progress affect final project evaluation on November 5?"],
+      "next_action": "Academic support should verify the assignment record and course administration should audit progress calculation. Confirm evaluation eligibility before November 5."
+    }
+  }
+]
