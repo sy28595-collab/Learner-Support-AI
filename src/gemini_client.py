@@ -12,7 +12,7 @@ from models.schemas import HandoverSummary
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
-
+MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
 # ==========================================
 # 1. GEMINI CONFIGURATION
