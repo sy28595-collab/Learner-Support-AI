@@ -421,8 +421,8 @@ def show():
     result = search_conversations(
         query=search_query.strip() or None,
         status=selected_status,
-        page=st.session_state.history_page,
-        page_size=10
+        page=1,
+        page_size=max(total,1)
     )
 
     records = result["records"]
@@ -490,7 +490,7 @@ def show():
                 dataframe,
                 use_container_width=True,
                 hide_index=True,
-                height=285
+                height=420
             )
 
         else:

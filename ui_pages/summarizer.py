@@ -18,90 +18,93 @@ def load_page_css():
     st.markdown("""
     <style>
 
-    /* Page heading */
-
     .main-heading {
-        font-size: 30px;
-        font-weight: 750;
-        color: #172033;
-        margin-bottom: 3px;
+        font-size: 28px;
+        font-weight: 800;
+        color: #172554;
+        margin-bottom: 2px;
     }
 
     .page-caption {
         color: #64748B;
-        font-size: 13px;
+        font-size: 12px;
         margin-bottom: 12px;
     }
 
-    /* Section heading */
-
     .section-heading {
-        font-size: 22px;
-        font-weight: 700;
-        color: #172033;
+        font-size: 18px;
+        font-weight: 750;
+        color: #172554;
+        margin-bottom: 5px;
     }
 
-    /* Summary cards */
+    .panel-caption {
+        color: #64748B;
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
 
     div[data-testid="stVerticalBlockBorderWrapper"] {
-        border-radius: 11px;
-        transition: all 0.25s ease;
+        border-radius: 13px;
+        border-color: #DCE4F2;
     }
-
-    div[data-testid="stVerticalBlockBorderWrapper"]:hover {
-        border-color: #BFDBFE;
-        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
-    }
-
-    /* Buttons */
 
     .stButton button {
         border-radius: 9px;
-        font-weight: 600;
-        transition: all 0.25s ease;
+        font-weight: 650;
+        transition: all 0.2s ease;
     }
 
     .stButton button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 12px rgba(37, 99, 235, 0.15);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
     }
-
-    /* Metric cards */
 
     div[data-testid="stMetric"] {
         background: #FFFFFF;
         border: 1px solid #E5E7EB;
-        border-radius: 12px;
-        padding: 12px;
-        transition: all 0.25s ease;
+        border-radius: 11px;
+        padding: 10px;
     }
 
-    div[data-testid="stMetric"]:hover {
-        transform: translateY(-3px);
-        border-color: #BFDBFE;
+    .selector-label {
+        color: #64748B;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
     }
 
-    /* Page animation */
+    .selector-value {
+        color: #172554;
+        font-size: 14px;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+    }
 
     @keyframes pageFade {
-
         from {
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateY(7px);
         }
 
         to {
             opacity: 1;
             transform: translateY(0);
         }
-
     }
 
     .main .block-container {
-        animation: pageFade 0.5s ease;
+        animation: pageFade 0.35s ease;
+        padding-top: 0.55rem !important;
     }
 
-    /* Accessibility */
+    @media (max-width: 900px) {
+        .main-heading {
+            font-size: 23px;
+        }
+    }
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -112,7 +115,6 @@ def load_page_css():
             animation-delay: 0ms !important;
             transition-duration: 0.01ms !important;
         }
-
     }
 
     </style>
@@ -155,8 +157,6 @@ def create_chat_html(messages):
                 border-radius: 12px;
             }
 
-            /* Message rows */
-
             .message-row {
                 display: flex;
                 width: 100%;
@@ -165,19 +165,13 @@ def create_chat_html(messages):
                 animation: messageEnter 0.45s ease forwards;
             }
 
-            /* Learner left */
-
             .learner-row {
                 justify-content: flex-start;
             }
 
-            /* Agent right */
-
             .agent-row {
                 justify-content: flex-end;
             }
-
-            /* Sequential animation */
 
             @keyframes messageEnter {
 
@@ -192,8 +186,6 @@ def create_chat_html(messages):
                 }
 
             }
-
-            /* Message bubble */
 
             .message-bubble {
                 max-width: 82%;
@@ -210,23 +202,17 @@ def create_chat_html(messages):
                 transform: translateY(-2px);
             }
 
-            /* Learner bubble */
-
             .learner-bubble {
                 background: #FFFFFF;
                 color: #172033;
                 border-radius: 4px 14px 14px 14px;
             }
 
-            /* Agent bubble */
-
             .agent-bubble {
                 background: #D9FDD3;
                 color: #172033;
                 border-radius: 14px 4px 14px 14px;
             }
-
-            /* Sender */
 
             .sender {
                 font-size: 11px;
@@ -242,16 +228,12 @@ def create_chat_html(messages):
                 color: #15803D;
             }
 
-            /* Message number */
-
             .message-number {
                 text-align: right;
                 font-size: 10px;
                 color: #94A3B8;
                 margin-top: 5px;
             }
-
-            /* Scrollbar */
 
             .chat-container::-webkit-scrollbar {
                 width: 5px;
@@ -262,15 +244,12 @@ def create_chat_html(messages):
                 border-radius: 10px;
             }
 
-            /* Accessibility */
-
             @media (prefers-reduced-motion: reduce) {
 
                 .message-row {
                     animation: none;
                     opacity: 1;
                 }
-
             }
 
         </style>
@@ -292,8 +271,6 @@ def create_chat_html(messages):
         message_text = html.escape(
             str(message["message"])
         ).replace("\n", "<br>")
-
-        # Each message appears one by one
 
         delay = min((index - 1) * 0.15, 4)
 
@@ -456,21 +433,15 @@ def display_empty_summary():
 
         st.write("")
 
-        # Robot icon
-
         st.markdown(
             "## 🤖",
             text_alignment="center"
         )
 
-        # Heading
-
         st.markdown(
             "### AI Summary",
             text_alignment="center"
         )
-
-        # Description
 
         st.caption(
             "Your handover summary will appear here "
@@ -498,12 +469,12 @@ def show():
 
     st.markdown(
         '<div class="page-caption">'
-        'Review learner conversations and generate AI-powered handover summaries.'
+        'Select a learner conversation, review messages and generate an AI handover summary.'
         '</div>',
         unsafe_allow_html=True
     )
 
-    # FETCH CONVERSATIONS
+    # LOAD AVAILABLE CONVERSATIONS
 
     threads = get_all_threads()
 
@@ -518,227 +489,288 @@ def show():
         for item in threads
     }
 
-    # CONVERSATION SELECTION
+    # THREE SECTION LAYOUT
 
-    col1, col2 = st.columns([3, 2])
-
-    with col1:
-
-        selected_thread = st.selectbox(
-            "Select Conversation",
-            options=list(thread_options.keys()),
-            format_func=lambda thread_id: (
-                f"{thread_id} | "
-                f"{thread_options[thread_id]['learner_id']}"
-            )
-        )
-
-    with col2:
-
-        agent_name = st.text_input(
-            "Support Agent",
-            value="Support Agent"
-        )
-
-    # LOAD CONVERSATION
-
-    thread_data = get_thread(selected_thread)
-
-    if not thread_data:
-
-        st.error("Conversation not found.")
-
-        return
-
-    thread_info = thread_data["thread"]
-
-    messages = thread_data["messages"]
-
-    # CLEAR OLD SUMMARY WHEN THREAD CHANGES
-
-    if st.session_state.get("active_thread") != selected_thread:
-
-        st.session_state["active_thread"] = selected_thread
-
-        st.session_state.pop(
-            "generated_summary",
-            None
-        )
-
-    # CONVERSATION INFORMATION
-
-    col1, col2, col3 = st.columns(3)
-
-    col1.metric(
-        "Thread ID",
-        thread_info["thread_id"]
-    )
-
-    col2.metric(
-        "Learner ID",
-        thread_info["learner_id"]
-    )
-
-    col3.metric(
-        "Total Messages",
-        len(messages)
-    )
-
-    st.divider()
-
-    # TWO COLUMN LAYOUT
-
-    chat_col, summary_col = st.columns(
-        [1.2, 0.8],
+    selector_col, chat_col, summary_col = st.columns(
+        [0.78, 1.25, 1.12],
         gap="small"
     )
 
     # ==================================================
-    # LEFT SIDE - CONVERSATION
+    # LEFT SECTION - CONVERSATION SELECTOR
+    # ==================================================
+
+    with selector_col:
+
+        with st.container(border=True, height=570):
+
+            st.markdown(
+                '<div class="section-heading">📂 Select Conversation</div>',
+                unsafe_allow_html=True
+            )
+
+            st.markdown(
+                '<div class="panel-caption">Choose a thread to view its conversation and summary.</div>',
+                unsafe_allow_html=True
+            )
+
+            selected_thread = st.selectbox(
+                "Conversation",
+                options=list(thread_options.keys()),
+                format_func=lambda thread_id: (
+                    f"{thread_id} | "
+                    f"{thread_options[thread_id]['learner_id']}"
+                ),
+                label_visibility="collapsed",
+                key="summarizer_thread_selector"
+            )
+
+            thread_data = get_thread(selected_thread)
+
+            if not thread_data:
+
+                st.error("Conversation not found.")
+
+                return
+
+            thread_info = thread_data["thread"]
+
+            messages = thread_data["messages"]
+
+            # CLEAR PREVIOUS SUMMARY WHEN THREAD CHANGES
+
+            if st.session_state.get("active_thread") != selected_thread:
+
+                st.session_state["active_thread"] = selected_thread
+
+                st.session_state.pop(
+                    "generated_summary",
+                    None
+                )
+
+            st.divider()
+
+            st.markdown("**CONVERSATION DETAILS**")
+
+            st.markdown(
+                f'''<div class="selector-label">Thread ID</div>
+                <div class="selector-value">{html.escape(str(thread_info["thread_id"]))}</div>''',
+                unsafe_allow_html=True
+            )
+
+            st.write("")
+
+            st.markdown(
+                f'''<div class="selector-label">Learner ID</div>
+                <div class="selector-value">{html.escape(str(thread_info["learner_id"]))}</div>''',
+                unsafe_allow_html=True
+            )
+
+            st.write("")
+
+            st.markdown(
+                f'''<div class="selector-label">Total Messages</div>
+                <div class="selector-value">{len(messages)}</div>''',
+                unsafe_allow_html=True
+            )
+
+            st.divider()
+
+            st.markdown("**SUPPORT AGENT**")
+
+            agent_name = st.text_input(
+                "Agent name",
+                value="Support Agent",
+                key="summarizer_agent_name",
+                label_visibility="collapsed",
+                placeholder="Enter support agent name"
+            )
+
+            st.caption(
+                "This name is recorded in the summary audit log."
+            )
+
+            st.divider()
+
+            if st.button(
+                "↻ Refresh Conversation",
+                width="stretch",
+                key="refresh_summarizer_thread"
+            ):
+
+                st.rerun()
+
+    # ==================================================
+    # CENTER SECTION - CONVERSATION
     # ==================================================
 
     with chat_col:
 
-        st.markdown(
-            '<div class="section-heading">💬 Conversation</div>',
-            unsafe_allow_html=True
-        )
+        with st.container(border=True, height=570):
 
-        if messages:
-
-            chat_html = create_chat_html(messages)
-
-            chat_height = min(
-                max(350, len(messages) * 85),
-                500
+            st.markdown(
+                '<div class="section-heading">💬 Conversation</div>',
+                unsafe_allow_html=True
             )
 
-            components.html(
-                chat_html,
-                height=chat_height,
-                scrolling=True
+            st.markdown(
+                f'<div class="panel-caption">{len(messages)} messages · {html.escape(str(selected_thread))}</div>',
+                unsafe_allow_html=True
             )
 
-        else:
+            if messages:
 
-            st.info("No messages available.")
+                chat_html = create_chat_html(messages)
 
-    # ==================================================
-    # RIGHT SIDE - AI SUMMARY
-    # ==================================================
-
-    with summary_col:
-
-        st.markdown(
-            '<div class="section-heading">✨ AI Handover Summary</div>',
-            unsafe_allow_html=True
-        )
-
-        st.caption(
-            f"Powered by Google Gemini | {MODEL}"
-        )
-
-        # GENERATE BUTTON
-
-        generate_button = st.button(
-            "✨ Generate Summary",
-            type="primary",
-            width="stretch"
-        )
-
-        if generate_button:
-
-            if not agent_name.strip():
-
-                st.error(
-                    "Please enter the support agent name."
-                )
-
-            elif not messages:
-
-                st.warning(
-                    "No conversation messages available."
+                components.html(
+                    chat_html,
+                    height=485,
+                    scrolling=True
                 )
 
             else:
 
-                try:
+                st.info(
+                    "No messages available for this conversation."
+                )
 
-                    with st.spinner(
-                        "Gemini is analyzing the conversation..."
-                    ):
+    # ==================================================
+    # RIGHT SECTION - AI HANDOVER SUMMARY
+    # ==================================================
 
-                        # Generate summary
+    with summary_col:
 
-                        summary = generate_handover_summary(
-                            messages
-                        )
+        with st.container(border=True, height=570):
 
-                        # Convert Pydantic response
+            st.markdown(
+                '<div class="section-heading">✨ AI Handover Summary</div>',
+                unsafe_allow_html=True
+            )
 
-                        summary_data = summary.model_dump()
+            st.markdown(
+                f'<div class="panel-caption">Powered by Google Gemini · {html.escape(str(MODEL))}</div>',
+                unsafe_allow_html=True
+            )
 
-                        # Save summary
+            result = st.session_state.get(
+                "generated_summary"
+            )
 
-                        summary_id, version = save_summary(
-                            thread_id=selected_thread,
-                            summary=summary_data,
-                            provider="gemini",
-                            model=MODEL,
-                            prompt_version="v1"
-                        )
+            has_current_summary = (
+                result is not None
+                and result.get("thread_id") == selected_thread
+            )
 
-                        # Save audit log
+            button_label = (
+                "↻ Regenerate Summary"
+                if has_current_summary
+                else "✨ Generate Summary"
+            )
 
-                        log_action(
-                            action="summary_generated",
-                            performed_by=agent_name.strip(),
-                            thread_id=selected_thread,
-                            summary_id=summary_id,
-                            details=(
-                                f"Gemini generated summary "
-                                f"version {version}."
-                            )
-                        )
+            generate_button = st.button(
+                button_label,
+                type="primary",
+                width="stretch",
+                key="generate_handover_summary"
+            )
 
-                        # Save in session state
+            if generate_button:
 
-                        st.session_state["generated_summary"] = {
-
-                            "summary": summary_data,
-
-                            "thread_id": selected_thread,
-
-                            "summary_id": summary_id,
-
-                            "version": version
-
-                        }
-
-                    st.success(
-                        "Summary generated successfully!"
-                    )
-
-                except Exception as error:
+                if not agent_name.strip():
 
                     st.error(
-                        "Summary generation failed."
+                        "Please enter the support agent name."
                     )
 
-                    st.exception(error)
+                elif not messages:
 
-        # DISPLAY SUMMARY
+                    st.warning(
+                        "No conversation messages available."
+                    )
 
-        result = st.session_state.get(
-            "generated_summary"
-        )
+                else:
 
-        if result and result["thread_id"] == selected_thread:
+                    try:
 
-            st.divider()
+                        with st.spinner(
+                            "Gemini is analyzing the conversation..."
+                        ):
 
-            display_summary(result)
+                            # GENERATE SUMMARY
 
-        else:
+                            summary = generate_handover_summary(
+                                messages
+                            )
 
-            display_empty_summary()
+                            summary_data = summary.model_dump()
+
+                            # SAVE SUMMARY
+
+                            summary_id, version = save_summary(
+                                thread_id=selected_thread,
+                                summary=summary_data,
+                                provider="gemini",
+                                model=MODEL,
+                                prompt_version="v1"
+                            )
+
+                            # SAVE AUDIT LOG
+
+                            log_action(
+                                action="summary_generated",
+                                performed_by=agent_name.strip(),
+                                thread_id=selected_thread,
+                                summary_id=summary_id,
+                                details=(
+                                    f"Gemini generated summary "
+                                    f"version {version}."
+                                )
+                            )
+
+                            # SAVE IN SESSION STATE
+
+                            st.session_state["generated_summary"] = {
+
+                                "summary": summary_data,
+
+                                "thread_id": selected_thread,
+
+                                "summary_id": summary_id,
+
+                                "version": version
+
+                            }
+
+                        st.rerun()
+
+                    except Exception as error:
+
+                        st.error(
+                            "Summary generation failed."
+                        )
+
+                        st.exception(error)
+
+            # DISPLAY CURRENT SUMMARY
+
+            result = st.session_state.get(
+                "generated_summary"
+            )
+
+            if result and result.get("thread_id") == selected_thread:
+
+                with st.container(
+                    height=455,
+                    border=False
+                ):
+
+                    display_summary(result)
+
+            else:
+
+                with st.container(
+                    height=455,
+                    border=False
+                ):
+
+                    display_empty_summary()

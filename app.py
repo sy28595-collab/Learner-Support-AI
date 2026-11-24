@@ -7,6 +7,7 @@ from ui_pages import review
 from ui_pages import history
 from ui_pages import analytics
 from ui_pages import export
+from ui_pages import new_conversation
 
 from database.db import get_connection, init_db
 from database.import_data import import_conversations
@@ -151,9 +152,11 @@ def get_gemini_status():
         return True
 
     try:
+
         return bool(st.secrets.get("GEMINI_API_KEY"))
 
     except Exception:
+
         return False
 
 
@@ -224,8 +227,8 @@ st.markdown(
 
         max-width: 1550px;
 
-        padding-top: 0.7rem !important;
-        padding-bottom: 1.5rem !important;
+        padding-top: 0.35rem !important;
+        padding-bottom: 0.75rem !important;
 
         padding-left: 2rem;
         padding-right: 2rem;
@@ -263,6 +266,59 @@ st.markdown(
     }
 
 
+    /* SIDEBAR TOP SPACING */
+
+    section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+
+        padding-top: 0 !important;
+    }
+
+
+    section[data-testid="stSidebar"] .block-container {
+
+        padding-top: 0.2rem !important;
+    }
+
+
+    /* SIDEBAR BRANDING */
+
+    section[data-testid="stSidebar"] h1 {
+
+        margin-top: 0 !important;
+        margin-bottom: 0.15rem !important;
+
+        padding-top: 0 !important;
+
+        font-size: 1.15rem !important;
+        line-height: 1.3 !important;
+    }
+
+
+    section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+
+        margin-top: 0 !important;
+        margin-bottom: 0.45rem !important;
+    }
+
+
+    section[data-testid="stSidebar"] hr {
+
+        margin: 0.45rem 0 !important;
+
+        border-color: rgba(255,255,255,0.16);
+    }
+
+
+    section[data-testid="stSidebar"] h3 {
+
+        margin-top: 0.15rem !important;
+        margin-bottom: 0.35rem !important;
+
+        font-size: 0.82rem !important;
+        letter-spacing: 0.08em !important;
+    }
+
+
     /* SIDEBAR TEXT */
 
     section[data-testid="stSidebar"] h1,
@@ -284,51 +340,69 @@ st.markdown(
     }
 
 
-    /* SIDEBAR DIVIDER */
+    /* SIDEBAR NAVIGATION - BUTTON BASED */
 
-    section[data-testid="stSidebar"] hr {
+    section[data-testid="stSidebar"] [class*="st-key-nav_"] {
 
-        border-color: rgba(255,255,255,0.16);
+        width: 100% !important;
+        margin: 0 !important;
     }
 
 
-    /* SIDEBAR NAVIGATION */
+    section[data-testid="stSidebar"] [class*="st-key-nav_"] button {
 
-    section[data-testid="stSidebar"] div[role="radiogroup"] {
+        box-sizing: border-box !important;
 
-        gap: 7px;
-    }
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
 
+        width: 100% !important;
+        min-width: 100% !important;
 
-    section[data-testid="stSidebar"] div[role="radiogroup"] label {
+        height: 42px !important;
+        min-height: 42px !important;
 
-        padding: 10px 11px;
+        padding: 0 12px !important;
+        margin: 0 !important;
 
-        border-radius: 11px;
+        border-radius: 10px !important;
+        border: 1px solid transparent !important;
+
+        background: rgba(255,255,255,0.035) !important;
 
         color: #EAF1FF !important;
 
-        transition: all 0.2s ease;
+        font-size: 0.89rem !important;
+        font-weight: 600 !important;
 
-        border: 1px solid transparent;
+        text-align: left !important;
+
+        box-shadow: none !important;
+
+        transition:
+            background 0.18s ease,
+            border-color 0.18s ease !important;
     }
 
 
     /* NAVIGATION HOVER */
 
-    section[data-testid="stSidebar"]
-    div[role="radiogroup"] label:hover {
+    section[data-testid="stSidebar"] [class*="st-key-nav_"] button:hover {
 
-        background: rgba(147, 197, 253, 0.16);
+        background: rgba(147,197,253,0.16) !important;
 
-        transform: translateX(3px);
+        border-color: rgba(191,219,254,0.20) !important;
+
+        color: #FFFFFF !important;
+
+        transform: none !important;
     }
 
 
     /* ACTIVE NAVIGATION */
 
-    section[data-testid="stSidebar"]
-    div[role="radiogroup"] label:has(input:checked) {
+    section[data-testid="stSidebar"] [class*="st-key-nav_"] button[kind="primary"] {
 
         background: linear-gradient(
             100deg,
@@ -336,20 +410,27 @@ st.markdown(
             #7C3AED
         ) !important;
 
-        border-radius: 11px !important;
-
-        border: 1px solid rgba(255,255,255,0.15);
-
-        box-shadow: 0 5px 14px rgba(99,102,241,0.25);
-    }
-
-
-    section[data-testid="stSidebar"]
-    div[role="radiogroup"] label:has(input:checked) p {
+        border: 1px solid rgba(255,255,255,0.18) !important;
 
         color: #FFFFFF !important;
 
         font-weight: 750 !important;
+
+        box-shadow: 0 4px 12px rgba(99,102,241,0.22) !important;
+    }
+
+
+    /* NAVIGATION TEXT */
+
+    section[data-testid="stSidebar"] [class*="st-key-nav_"] button p {
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: inherit !important;
+
+        font-size: inherit !important;
+        font-weight: inherit !important;
     }
 
 
@@ -367,8 +448,7 @@ st.markdown(
     }
 
 
-    section[data-testid="stSidebar"]
-    [data-testid="stAlert"] p {
+    section[data-testid="stSidebar"] [data-testid="stAlert"] p {
 
         color: #166534 !important;
 
@@ -378,8 +458,7 @@ st.markdown(
     }
 
 
-    section[data-testid="stSidebar"]
-    [data-testid="stAlert"] svg {
+    section[data-testid="stSidebar"] [data-testid="stAlert"] svg {
 
         fill: #15803D !important;
     }
@@ -401,16 +480,14 @@ st.markdown(
 
         padding: 10px 14px;
 
-        margin-top: 0px;
-
-        margin-bottom: 16px;
+        margin-top: 0;
+        margin-bottom: 10px;
 
         width: 100%;
 
         box-shadow: 0 6px 20px rgba(30,64,120,0.08);
 
         position: relative;
-
         z-index: 5;
     }
 
@@ -418,7 +495,6 @@ st.markdown(
     .st-key-main_navbar [data-testid="stHorizontalBlock"] {
 
         align-items: center;
-
         gap: 9px;
     }
 
@@ -688,7 +764,6 @@ st.markdown(
         .main .block-container {
 
             padding-left: 1rem;
-
             padding-right: 1rem;
 
             padding-top: 0.5rem !important;
@@ -725,53 +800,71 @@ st.markdown(
 # 10. SIDEBAR NAVIGATION
 # ==========================================
 
+page_icons = {
+
+    "Dashboard": "🏠 Dashboard",
+
+    "Conversation Summarizer":
+        "💬 Conversation Summarizer",
+
+    "Handover Review":
+        "📋 Handover Review",
+
+    "Conversation History":
+        "📁 Conversation History",
+
+    "Analytics":
+        "📊 Analytics",
+
+    "Export":
+        "📤 Export",
+
+    "New Conversation":
+        "➕ New Conversation",
+}
+
+
+if st.session_state.get("page_navigation") not in page_icons:
+
+    st.session_state["page_navigation"] = "Dashboard"
+
+
 with st.sidebar:
 
     st.markdown("# 🎓 Learner Support AI")
 
     st.caption("AI-powered support management")
 
-    st.divider()
-
     st.markdown("### WORKSPACE")
 
 
-    page_icons = {
+    for page_name, page_label in page_icons.items():
 
-        "Dashboard": "🏠 Dashboard",
+        is_active = (
+            st.session_state["page_navigation"] == page_name
+        )
 
-        "Conversation Summarizer":
-            "💬 Conversation Summarizer",
+        if st.button(
 
-        "Handover Review":
-            "📋 Handover Review",
+            page_label,
 
-        "Conversation History":
-            "📁 Conversation History",
+            key=f"nav_{page_name.lower().replace(' ', '_')}",
 
-        "Analytics":
-            "📊 Analytics",
+            type="primary" if is_active else "secondary",
 
-        "Export":
-            "📤 Export"
-    }
+            width="stretch",
+        ):
+
+            st.session_state["page_navigation"] = page_name
+
+            st.rerun()
 
 
-    selected_page = st.radio(
-
-        "Navigation",
-
-        list(page_icons.keys()),
-
-        format_func=lambda page: page_icons[page],
-
-        label_visibility="collapsed",
-
-        key="page_navigation"
-    )
+    selected_page = st.session_state["page_navigation"]
 
 
     st.divider()
+
 
     # SYSTEM STATUS
 
@@ -1114,3 +1207,8 @@ elif selected_page == "Analytics":
 elif selected_page == "Export":
 
     export.show()
+
+
+elif selected_page == "New Conversation":
+
+    new_conversation.show()

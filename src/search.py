@@ -13,8 +13,8 @@ def search_conversations(
     if page < 1:
         raise ValueError("Page must be at least 1.")
 
-    if page_size not in [10, 20, 50]:
-        raise ValueError("Page size must be 10, 20 or 50.")
+    if not isinstance(page_size, int) or page_size < 1:
+        raise ValueError("Page size must be a positive integer.")
 
     # Validate status
     allowed_statuses = ["open", "resolved", "closed"]
