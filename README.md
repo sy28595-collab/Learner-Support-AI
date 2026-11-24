@@ -1,10 +1,10 @@
 # Learner Support AI
 
+## Project Links
+
 **Live application:** https://sandeep-learner-support-ai.streamlit.app/  
 **GitHub repository:** https://github.com/sy28595-collab/Learner-Support-AI  
-**Demo video:** Coming soon
-
----
+**Demo Video:** [Watch Project Demo](https://drive.google.com/file/d/165vqP3kBisaNhjxyfu4WiMEv9Ic9nRVp/view?usp=sharing)
 
 ## About the project
 
@@ -207,7 +207,7 @@ The app is configured to use Streamlit Community Cloud. The Gemini API key must 
 
 A short walkthrough video will be added here after it has been recorded and uploaded.
 
-**Demo video:** Coming soon
+**Demo video:** https://drive.google.com/file/d/165vqP3kBisaNhjxyfu4WiMEv9Ic9nRVp/view?usp=sharing
 
 ---
 

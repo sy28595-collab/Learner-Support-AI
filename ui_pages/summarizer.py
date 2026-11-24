@@ -1,7 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import html
-
+import logging
 from database.crud import get_thread, get_all_threads
 from database.summary_manager import save_summary
 from database.audit_manager import log_action
@@ -745,11 +745,38 @@ def show():
 
                     except Exception as error:
 
-                        st.error(
-                            "Summary generation failed."
-                        )
+                        error_message = str(error)
 
-                        st.exception(error)
+                        if "429" in error_message or "RESOURCE_EXHAUSTED" in error_message:
+
+                            st.warning(
+                                "⚠️ Gemini Free Tier daily limit has been reached. "
+                                "Please try again after your quota resets."
+                            )
+
+                        elif "503" in error_message or "UNAVAILABLE" in error_message:
+
+                            st.warning(
+                                "⚠️ Gemini is temporarily unavailable due to high demand. "
+                                "Please try again later."
+                            )
+                        elif "401" in error_message or "403" in error_message:
+
+                            st.error(
+                                "Gemini API authentication failed. "
+                                "Please check your API key."
+                            )
+
+                        else:
+
+                            st.error(
+                                "Summary generation failed. Please try again later."
+                            )
+
+                        logging.error(
+                            "Summary generation failed: %s",
+                            error_message
+                        )
 
             # DISPLAY CURRENT SUMMARY
 
